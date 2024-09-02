@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SASS</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="shortcut icon" href="./images/favicon.webp" type="image/x-icon">
+</head>
+
+<body>
+    <main class='container'>
+        <h1 class='main_text'>SASS</h1>
+        <section>
+            <div>
+                <h4>SASS nima ?</h4>
+                <ul>
+                    <li>
+                        Sass (Syntactically Awesome Style Sheets) - bu CSS uchun preprocesser bo'lib, u CSS yozishni
+                        osonlashtiradi va kuchliroq qiladi. Sass dastlab ishlab chiqarilgan CSS sintaksisini
+                        kengaytirish
+                        uchun ishlatiladi va qo'shimcha xususiyatlar, sintaksis qisqartmalari, va qayta foydalanish
+                        imkoniyatlarini taqdim etadi.
+                    </li>
+                    <li>
+                        Chiqish sanasi: 2006-yil
+                    </li>
+                    <li>
+                        Sintaksis: <br>
+                        - Sass: Indentsiya asosida, CSS'ga o'xshash bo'lmagan sintaksis. <br>
+                        - SCSS: CSS'ga o'xshash sintaksis, CSS kodini o'z ichiga oladi va Sass funksiyalarini
+                        qo'llab-quvvatlaydi. </li>
+                    <li>
+                        Asosiy Xususiyatlar: O'zgaruvchilar, mixins, nesting, meros, matematik amallar, modullar
+                        (partials).
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h4>SASS vs SCSS</h4>
+                <ul>
+                    <li>Sass (Indentation Syntax)</li>
+                    <li>Sintaksis: Sass o'zining o'ziga xos sintaksisiga ega bo'lib, unda qavslar <span
+                            class='core_element'>({})</span> va
+                        nuqta-vergul<span class='core_element'> (;)</span>
+                        ishlatilmaydi. Buning o'rniga, u Python kabi ichki ko'rinishni belgilash uchun indentatsiya
+                        (bo'sh
+                        joy yoki tab) ishlatadi.</li>
+                    <li>Chidamlilik: Sass sintaksisi CSS-dan ancha qisqa va o'qish osonroq bo'lishi mumkin, chunki
+                        ortiqcha
+                        belgilashlardan qochadi.</li>
+                    <li>Fayl kengaytmasi: Sass sintaksisidagi fayllar <i class='core_element'>.sass</i> kengaytmasi
+                        bilan
+                        tugaydi.</li>
+                </ul>
+            </div>
+            <div>
+                <h4>SCSS (Sassy CSS)</h4>
+                <ul>
+                    <li>Sintaksis: SCSS odatiy CSS bilan to‘liq mos keladigan sintaksisga ega. U qavslar <span
+                            class='core_element'>({})</span>,
+                        nuqta-vergullar <span class='core_element'>(;)</span>, va boshqa CSS qoidalarini o'z ichiga
+                        oladi,
+                        lekin Sass imkoniyatlarini
+                        kengaytirish va kuchaytirish uchun ishlatiladi.</li>
+                    <li>Oson o‘tish: CSS-dan SCSS-ga o'tish juda oson, chunki SCSS odatdagi CSS qoidalarini qabul
+                        qiladi. Bu
+                        SCSS-ni CSS biladigan, lekin Sass o'rganmoqchi bo'lganlar uchun afzal qiladi.</li>
+                    <li>Fayl kengaytmasi: SCSS sintaksisidagi fayllar <i class='core_element'>.scss</i> kengaytmasi
+                        bilan
+                        tugaydi.</li>
+                    <li>Muammo: <a href="https://github.com/sass/sass/issues/216" target='_blank'>#216</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>7-1 pattern</h4>
+                <ul>
+                    <li> <b class='core_element'>base/ </b>: Loyihaning asosiy (fundamental) qismlari, global CSS
+                        kodlari
+                        shu
+                        yerda joylashadi. Bu joyda
+                        <i class='core_element'>reset, typography, fonts,</i> variables kabi fayllar bo'lishi mumkin.
+                    </li>
+                    <li> <b class='core_element'>components/ </b>: Loyihaning kichik, qayta ishlatiladigan
+                        komponentlari.
+                        Masalan, <i class='core_element'> buttons, cards, dropdowns</i> kabi elementlar.</li>
+                    <li> <b class='core_element'>layout/ </b>: Loyiha tuzilmasini boshqaradigan fayllar. Masalan, <i
+                            class='core_element'> header,
+                            footer, grid, navigation </i> kabi strukturalar bu yerda joylashadi.</li>
+                    <li> <b class='core_element'>pages/ </b>: Alohida sahifalar uchun stil qoidalari. Masalan, <i
+                            class='core_element'> home,
+                            about, contact</i> kabi sahifalarga xos stylinglar bu yerda bo'lishi mumkin.</li>
+                    <li> <b class='core_element'> themes/ </b>: Agar loyiha bir nechta rangli mavzularni (themes)
+                        qo'llab-quvvatlasa, ularni shu yerda boshqarish mumkin.</li>
+                    <li> <b class='core_element'>abstracts/ </b>: Bu yerda <i class='core_element'> mixin, function,
+                            variables</i> kabi utilitlar
+                        bo'ladi. Bu papka ba'zan <i class='core_element'> helpers</i> yoki <i class='core_element'>
+                            utils
+                        </i> deb ham ataladi.</li>
+                    <li> <b class='core_element'>vendors/ </b>: Uchinchi tomon kutubxonalari yoki frameworklar
+                        uchun stil kodlari. Masalan, <i class='core_element'> bootstrap, jquery-ui</i> kabi CSS
+                        kutubxonalari.</li>
+                    <li> <b class='core_element'>main.scss </b>: Bu fayl loyihaning barcha fayllarini bir joyda jamlaydi
+                        (<i class='core_element'>@import</i> orqali). Bu fayl odatda
+                        asosiy stil fayli bo'lib, loyiha oxirida ishlab chiqarish uchun kompilyatsiya qilinadi.</li>
+                </ul>
+                <img src="./images/7-1.png" alt="pattern">
+            </div>
+        </section>
+        <section>
+            <div>
+                <h4>@import</h4>
+                <ul>
+                    <li>
+                        Sass-da <i class='core_element'>@import</i> CSS-dagi <i class='core_element'>@import</i> dan
+                        farq
+                        qiladi. Sass-da u
+                        boshqa Sass fayllarini bitta asosiy
+                        faylga birlashtirish uchun ishlatiladi.
+                    </li>
+                    <li>
+                        @import 'variables'; <br>
+                        @import 'mixins'; <br>
+                        @import 'base';
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <h4>@use</h4>
+                <ul>
+                    <li>
+                        <i class='core_element'>@use</i> sizga fayllarni import qilish imkonini beradi,
+                        lekin ularning o'zgaruvchilari va mikslari global nom maydoniga qo'shilmaydi. Bu nom
+                        to'qnashuvlarining oldini olishga yordam beradi.
+                    </li>
+                    <li>
+                        Import qilingan fayllardagi o'zgaruvchilarni foydalanishda nom maydoni orqali murojaat qilasiz.
+                    </li>
+                    <li>
+                        Sass jamoasi <i>@import</i> dan foydalanishni davom ettirmaydi . Sass keyingi bir necha yil
+                        ichida uni
+                        bosqichma-bosqich olib tashlaydi va oxir-oqibat uni tildan butunlay olib tashlaydi. Buning
+                        o'rniga <i> @use</i> dan foydalanish kerak. <br>
+                    </li>
+                    <li>
+                        Eng katta kamchiliklaridan biri <i>@import</i> barcha o'zgaruvchilar, miksinlar va
+                        funktsiyalarni
+                        global
+                        foydalanishga imkon beradi. Bu odamlarga biror narsa aniqlangan joyni aytishni juda
+                        qiyinlashtiradi .
+                    </li>
+                </ul>
+                <img src="./images/use.png" alt="use">
+            </div>
+            <div>
+                <h4>@forward</h4>
+                <ul>
+                    <li>
+                        <i class='core_element'>@forward</i> orqali siz bir fayldan boshqa biriga o'zgaruvchilar,
+                        mikslari
+                        va funksiyalarni o'tkazishingiz mumkin. Bu fayllarni modul sifatida yaratishda foydali.
+                    </li>
+                </ul>
+                <img src="./images/forward.png" alt="forward">
+            </div>
+            <div>
+                <h4>@mixin va @include</h4>
+                <ul>
+                    <li>
+                        <i class='core_element'>@mixin</i> bir necha marta foydalanilishi mumkin bo'lgan stil bloklarini
+                        yaratish imkonini beradi.
+                    </li>
+                    <li>
+                        <i class='core_element'>@include</i> esa bu stil bloklarini qo'shish uchun ishlatiladi.
+                    </li>
+                </ul>
+                <img src="./images/mixin.png" alt="mixin">
+            </div>
+            <div>
+                <h4>@function</h4>
+                <p><i class='core_element'>@function</i> Sass ichida funksiya yaratishga imkon beradi, u biror qiymatni
+                    qaytaradi va shu
+                    qiymatdan
+                    keyingi stil yozuvlarida foydalaniladi.</p>
+                <img src="./images/function.png" alt="function">
+            </div>
+            <div>
+                <h4>@extend</h4>
+                <p><i class='core_element'>@extend</i> mavjud selektorning uslubini boshqa selektorga qo'shishga imkon
+                    beradi. Bu uslublarni qayta ishlatishni osonlashtiradi.</p>
+                <img src="./images/extend.png" alt="extend">
+            </div>
+            <div>
+                <h4>@error</h4>
+                <p><i class='core_element'>@error </i> Sass kompayl vaqtida xatolarni chiqarish uchun ishlatiladi. Bu
+                    uslubdagi mantiqiy xatolarni aniqlashda foydali.</p>
+                <img src="./images/error.png" alt="error">
+            </div>
+            <div>
+                <h4>@else if, @if</h4>
+                <p>Sass-da <i class='core_element'> @else if @if</i> shartli operatorining qo'shimcha holati sifatida
+                    ishlatiladi. Siz <i class='core_element'> @if</i> shartini
+                    qo'shimcha shartlar bilan kengaytirishingiz mumkin.</p>
+                <img src="./images/else_if.png" alt="else_if">
+            </div>
+            <div>
+                <h4>@each</h4>
+                <p><i class='core_element'>@each</i> sizga ro'yxat yoki kartaga kiruvchi elementlar bo'yicha iteratsiya
+                    qilish imkonini beradi.</p>
+                <img src="./images/each.png" alt="each">
+            </div>
+            <div>
+                <h4>@for</h4>
+                <p><i class='core_element'>@for</i> ssizga indeks yoki raqam orqali iteratsiya qilish imkonini beradi. U
+                    ikki xil sintaksisni qo'llab-quvvatlaydi: <i class='core_element'> from...to</i> va <i
+                        class='core_element'> from...through</i>.</p>
+                <div class='flex'>
+                    <div>
+                        <img src="./images/from_to.png" alt="from_to">
+                        <p>Bularni farqi from to oxirgi raqamni olmaydi</p>
+                    </div>
+                    <div>
+                        <img src="./images/from_trough.png" alt="from_trough">
+                        <p>from throgh bo’lsa oxirgi raqamni oladi</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <h4>&</h4>
+                <img src="./images/&.png" alt="&">
+            </div>
+        </section>
+        <section>
+            <div>
+                <h4>BEM (Block Element Modifier)</h4>
+                <p>BEM metodologiyasi CSS klasslarini aniq va samarali tashkil qilish uchun ishlatiladi. U CSS kodini
+                    modulli va qayta ishlatishga qulay qilishga yordam beradi.</p>
+                <img src="./images/bem.png" alt="bem">
+            </div>
+            <div>
+                <h4> OOCSS (Object-Oriented CSS)</h4>
+                <ul>
+                    <li>
+                        Tuzilishi: CSS ob'ektlarga asoslangan. Strukturaviy va tashqi ko'rinish uslublarini ajratib
+                        beradi.
+                    </li>
+                    <li>
+                        Ma'lumotlar: <br>
+                        - Structural Styles: Ob'ektning strukturasi (`.grid`, `.container`).
+                        - Skin Styles: Ob'ektning ko'rinishi (`.color-primary`, `.border-thick`).
+                    </li>
+                    <li>
+                        Foydalanuvchilar uchun: Kodni qayta ishlatish va ob'ektlar orqali boshqarish uchun
+                        mo'ljallangan. Qayta ishlatishni osonlashtiradi.
+                    </li>
+                    <li>
+                        Qo'llanilishi: Modular komponentlarni yaratishda va ularni qayta ishlatishda yaxshi
+                    </li>
+                </ul>
+                <img src="./images/oocss.png" alt="oocss">
+            </div>
+            <div>
+                <h4>SMACSS (Scalable and Modular Architecture for CSS)</h4>
+                <ul>
+                    <li>
+                        Tuzilishi: CSS kodini toifalarga ajratadi: Base, Layout, Module, State, va Theme.
+                    </li>
+                    <li>
+                        Ma'lumotlar: <br>
+                        - Base: Asosiy uslublar (`body`, `a`). <br>
+                        - Layout: Sahifaning umumiy tuzilishi (`.header`, `.footer`). <br>
+                        - Module: Mustaqil komponentlar (`.button`, `.form`). <br>
+                        - State: Elementning holati (`.is-active`, `.is-hidden`). <br>
+                        - Theme: Vizual uslublar (`.theme-dark`, `.theme-light`).
+                    </li>
+                    <li>
+                        Foydalanuvchilar uchun: Har xil toifalarga ajratilgan kodni yaxshi tashkil etadi, ammo
+                        strukturani aniqlash va boshqarishda sizga yordam beradi.
+                    </li>
+                    <li>
+                        Qo'llanilishi: Dinamik va o'zgaruvchan saytlar uchun qulay.
+                    </li>
+                </ul>
+                <img src="./images/smacss.png" alt="smacss">
+            </div>
+            <div>
+                <h4>ITCSS (Inverted Triangle CSS)</h4>
+                <ul>
+                    <li>
+                        Foydalanuvchilar uchun: Katta va murakkab loyihalar uchun foydalidir. CSS fayllarini darajalar
+                        bo'yicha ajratadi va ularni boshqarishni osonlashtiradi.
+                    </li>
+                    <li>
+                        Qo'llanilishi: Murakkab loyihalarda strukturani boshqarish va kengaytirish uchun yaxshi.
+                    </li>
+                    <li>
+                        7-1 pattern kabi
+                    </li>
+
+                </ul>
+                <img src="./images/itcss.png" alt="itcss">
+            </div>
+        </section>
+
+    </main>
+</body>
+
+</html>

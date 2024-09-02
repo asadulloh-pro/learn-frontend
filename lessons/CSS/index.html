@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="shortcut icon" href="./images/favicon.webp" type="image/x-icon">
+</head>
+
+<body>
+    <main class='container'>
+        <h1 class='main_text'>CSS</h1>
+        <section>
+            <h2>CSS nima ?</h2>
+            <ul>
+                <li>
+                    CSS (Cascading Style Sheets) – bu veb-sahifalarning ko'rinishini boshqaruvchi stil tili. HTML yoki
+                    boshqa markup tillari bilan birgalikda ishlatiladi, CSS sahifadagi elementlarning vizual
+                    ko'rinishini belgilashga imkon beradi.
+                </li>
+                <li>
+                    Yani html code larga dizayn berish va har hil animatysiyalar qilishda yordam beradi.
+                </li>
+            </ul>
+            <h4>CSS'ning paydo bo'lishi:</h4>
+            <ul>
+                <li>CSS birinchi marta 1994-yilda Håkon Wium Lie tomonidan taklif qilingan. U shu paytda CERN da, Tim
+                    Berners-Lee bilan birga ishlayotgan edi.</li>
+                <li>CSS ning asosiy g'oyasi HTML dan ko'rinishni ajratish va bir nechta HTML hujjatlar uchun bitta stil
+                    varaqasidan foydalanish imkoniyatini berish edi.</li>
+            </ul>
+            <h4>CSS1:</h4>
+            <ul>
+                <li>Chiqish sanasi: 1996-yil, dekabr.</li>
+                <li>Tavsif: CSS1 — bu CSS ning birinchi versiyasi bo'lib, uning maqsadi HTML elementlarini stilizatsiya
+                    qilish imkoniyatini yaratish edi. CSS1 o'z ichiga ranglar, shriftlar, oraliq masofalar va uslublar
+                    qo'llash kabi asosiy xususiyatlarni kiritdi.</li>
+            </ul>
+            <h4>CSS4:</h4>
+            <ul>
+                <li>Chiqish sanasi: CSS4 hali to'liq rasmiylashtirilmagan va rivojlanayotgan bosqichda.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>CSS syntax</h2>
+            <img src="./images/css_syntax.png" alt="css_syntax">
+        </section>
+        <section>
+            <h2>CSS selectors</h2>
+            <ul>
+                <li>
+                    #id
+                </li>
+                <li>
+                    .class
+                </li>
+                <li>
+                    *
+                </li>
+                <li>
+                    element
+                </li>
+                <li>
+                    element,element,…
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2>CSS properties</h2>
+
+            <h4 class='css_property'>
+                box-reflect
+            </h4>
+            <p>
+                <i>below, above, left , right</i>
+            </p>
+            <img src="./images/box_reflect.png" alt="box_reflect">
+            <h4 class='css_property'>mix-blend-mode </h4>
+            <p>
+                <b>difference</b> - bu value orqali elementimizni background qandayligiga qarab color change bo’ladi
+                ya’ni orqa fon oq bolsa color qora bo’ladi.
+            </p>
+            <img src="./images/mix_blend_mode.png" alt="mix_blend_mode">
+            <h4 class='css_property'>background-blend-mode </h4>
+            <img src="./images/blend-mode.png" alt="table">
+            <div class='flex item-center'>
+                <img src="./images/table.jpg" alt="table">
+                <img src="./images/canon.jfif" alt="canon">
+            </div>
+            <img style='margin-top: 15px;' src="./images/mix_img.png" alt="mix_img">
+            <h4 class='css_property'>shape-outside</h4>
+            <p>
+                <code>shape-outside</code> CSS xususiyati elementning matn o'ralgan shaklini belgilash uchun
+                ishlatiladi.
+                Bu, asosan, matnning qanday qilib element atrofida joylashishini aniqlashda foydalidir, xususan,
+                suratlar yoki boshqa shakllar bilan ishlashda.
+            </p>
+            <img src="./images/shape_outside.png" alt="shape_outside">
+            <h4 class='css_property'>shape-outside</h4>
+            <img src="./images/mask_img.png" alt="mask_img">
+        </section>
+        <section>
+            <h2>
+                CSS functions
+            </h2>
+            <h4 class='css_property'>shape-outside</h4>
+            <p><b>oklch()</b> funktsiyasi rangni Oklab rang modeliga asosan tavsiflaydi. Oklab rang modeli rangni oqim
+                (L*),
+                qizil-yashil (a*), va sariq-ko'k (b*) koordinatalarida tasvirlaydi. Bu rang modeli ranglarni ko'rish va
+                moslashtirishni aniqroq qilish uchun mo'ljallangan.</p>
+            <ul>
+                <li>
+                    <b>l</b>: Oqlab rangining yorqinlik qiymati (0 to 1 oralig'ida).
+                </li>
+                <li>
+                    <b>a</b>: Qizil-yashil komponenti (odatda -1 dan +1 gacha). </li>
+                <li>
+                    <b>b</b>: Sariq-ko'k komponenti (odatda -1 dan +1 gacha). </li>
+                <li>
+                    <b>alpha</b> (ixtiyoriy): Rangning shaffoflik darajasi (0 dan 1 gacha).
+                </li>
+            </ul>
+            <p>
+                <b>oklab()</b> funktsiyasi rangni Oklab rang modeliga asosan ko'rsatadi, ammo u rangni formatda
+                tasvirlaydi.
+                <b>oklab()</b> rang modelida ranglar ko'proq aniqroq va zamonaviy tarzda ko'rsatiladi.
+            </p>
+            <ul>
+                <li><b>L</b>: Rangning yorqinlik darajasi (0 dan 1 gacha).</li>
+                <li>
+                    <b>a</b>: Qizil-yashil komponenti (odatda -1 dan +1 gacha). </li>
+                <li>
+                    <b>b</b>: Sariq-ko'k komponenti (odatda -1 dan +1 gacha). </li>
+            </ul>
+        </section>
+        <section>
+            <h2>
+                Override Global Variable With Local Variable
+            </h2>
+            <img src="./images/override.png" alt="override">
+        </section>
+    </main>
+</body>
+
+</html>
