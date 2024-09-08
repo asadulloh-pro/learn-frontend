@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+    <link rel="shortcut icon" href="./images/html.png" type="image/x-icon">
+    <style>
+        img {
+            max-width: 1000px;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <section>
+            <div>
+                <h1>HTML nima?</h1>
+                <ul>
+                    <li>HTML (HyperText Markup Language)</li>
+                    <li>HTML asoschisi  fizik Tim Berners-Li , bo’lib 1989 yilda internetga asoslangan gipermatn
+                        tizimini yozgan. </li>
+                    <li>HTML veb-sahifalarni yaratish uchun standart belgilash tilidir</li>
+                    <li>HTML Web-sahifaning tuzilishini tavsiflaydi</li>
+                    <li>HTML bir qator elementlardan iborat</li>
+                    <li>HTML elementlari brauzerga kontentni qanday ko'rsatishni aytadi</li>
+                    <li>HTML elementlari "bu sarlavha", "bu paragraf", "bu havola" va boshqalar kabi kontent qismlarini
+                        belgilaydi.</li>
+                </ul>
+            </div>
+        </section>
+        <section>
+            <div>
+                <h2>HTML Sematics</h2>
+                <p>Sematika bu html o’zi belgilab bergan qonun qoida va taglarni ketmaketligi tag structure.</p>
+                <img src="./images/sematics.png" alt="sematics">
+            </div>
+        </section>
+        <section>
+            <div>
+                <h2>DOCTYPE</h2>
+                <p>Sematika bu html o’zi belgilab bergan qonun qoida va taglarni ketmaketligi tag structure.</p>
+                <ul>
+                    <li>Buni qo’yish required hisoblanadi codeni birinchi qatoriga qo’yiladi.</li>
+                    <li>Standartlar rejimi: Doctype brauzerga sahifani standartlarga mos ravishda ko'rsatishni buyuradi.
+                        Agar Doctype noto'g'ri yoki kiritilmagan bo'lsa, ba'zi brauzerlar "quirks mode" deb ataladigan
+                        xatti-harakatlarga o'tadi, bu eski veb-sahifalarni ko'rsatish usuli.</li>
+                    <li>Qaror qabul qilish jarayonini soddalashtirish: Zamonaviy HTML5 doctype yozuvi juda sodda bo'lib,
+                        yangi hujjatlarni yaratishda xatolar qilish imkoniyatini kamaytiradi.</li>
+                    <li>Quirks Mode — bu brauzerlarning eski, standartlarga mos kelmaydigan veb-sahifalarni to'g'ri
+                        ko'rsatish uchun ishlatadigan maxsus rejimi. Bu rejimda brauzerlar veb-sahifalarni hozirgi
+                        zamonaviy HTML va CSS standartlariga mos ravishda emas, balki 1990-yillarning oxiri va
+                        2000-yillarning boshlaridagi eski, noto'g'ri yoki noto'liq kodlarni qo'llab-quvvatlash uchun
+                        ishlaydi.</li>
+
+                </ul>
+            </div>
+        </section>
+        <section>
+            <h2>Tags</h2>
+            <p>1. HTML taglardan iborat taglar esa 2 ga bo’linadi juft va toq.</p>
+            <p>2. Misol uchun toq tegalr br, hr…, shular bo’lsa juft taglar title, header, nav… shulardan iborat </p>
+            <p>3. &lt;menu&gt; = &lt;ul&gt;</p>
+            <div>
+                <b>4. &lt;html lang="en"&gt;</b>
+                <blockquote>
+                    lang="en" atributi sahifadagi matnning tilini belgilaydi. Bu yerda en qiymati ingliz tilini
+                    anglatadi.
+                    Bu atribut SEO (qidiruv tizimlari optimizatsiyasi) va yordamchi texnologiyalar (masalan, ekran
+                    o‘qish
+                    dasturlari) uchun foydali.
+                </blockquote>
+            </div>
+            <div>
+                <b>5. &lt;meta name="viewport" content="width=device-width, initial-scale=1.0" /&gt;</b>
+                <blockquote>
+                    Bu
+                    <b>meta</b> tegi mobil qurilmalarda sahifaning to‘g‘ri ko‘rinishini ta'minlash uchun ishlatiladi.
+                    content="width=device-width, initial-scale=1.0" qiymati sahifaning kengligini qurilma ekranining
+                    kengligiga moslashishini va dastlabki kattalashtirish darajasini belgilaydi. Bu responsiv dizaynni
+                    qo‘llab-quvvatlaydi.
+                </blockquote>
+            </div>
+            <div>
+                <b>6. &lt;head&gt;</b>
+                <blockquote>
+                    meta ma’lumotlarini o’z ichiga oladi.
+                    <b>head</b> qismidagi ma'lumotlar foydalanuvchiga ko‘rinmaydi, lekin brauzer va qidiruv tizimlari
+                    tomonidan ishlatiladi.
+                </blockquote>
+            </div>
+            <div>
+                <b>7. &lt;meta charset="UTF-8" &gt;</b>
+                <blockquote>
+                    <b>meta</b> tegining charset="UTF-8" atributi HTML hujjatining belgilar to‘plamini belgilaydi. UTF-8
+                    belgilar to‘plami turli tillarda va yozuv tizimlarida keng qo‘llaniladi. Bu hujjatning to‘g‘ri
+                    kodlash va ko‘rsatishni ta'minlaydi.
+                </blockquote>
+            </div>
+            <div>
+                <b>8. &lt;abbr &gt;</b>
+                <blockquote>
+                    bu tag TATU, TDTU shunday qisqartmalar uchun ishlatiladi
+                </blockquote>
+                <img src="./images/abbr.png" alt="abbr">
+            </div>
+            <div>
+                <b>9. &lt;map&gt;, &lt;area&gt;</b>
+                <blockquote>
+                    bu orqali biz imgni coords orqali belgilab olamiz va shuni click qilgan paytda qandaydir amal
+                    bajarishimiz mumkin bo’ladi </blockquote>
+                <img src="./images/map_area.png" alt="map_area">
+            </div>
+            <div>
+                <b>10. &lt;blockquote&gt;, &lt;q&gt;</b>
+                <blockquote>
+                    Teg  <b>blockquote </b>boshqa manbadan olingan bo'limni belgilaydi.</blockquote>
+                <img src="./images/blockquote.png" alt="blockquote">
+            </div>
+            <div>
+                <b>11. &lt;code&gt;, &lt;samp&gt;, &lt;kbd&gt;</b>
+                <blockquote>
+                    Bu teglar kompyuter kodining bir qismini aniqlash uchun ishlatiladi. Ichkaridagi tarkib brauzerning
+                    standart monospace shriftida ko'rsatiladi.
+                </blockquote>
+                <img src="./images/code_samp.png" alt="code_samp">
+            </div>
+            <div>
+                <b>12. &lt;em&gt;, &lt;i&gt;, &lt;cite&gt;, &lt;dfn&gt;</b>
+                <blockquote>
+                    <ul>
+                        <li>
+                            Teg <b>em</b> urg'u berilgan matnni aniqlash uchun ishlatiladi
+                        </li>
+                        <li>
+                            Teg <b>i</b> ko'pincha texnik atama, boshqa tildagi ibora, fikr, kema nomi va boshqalarni
+                            ko'rsatish uchun ishlatiladi.
+                        </li>
+                        <li>
+                            Teg <b>cite</b> ijodiy ishning nomini belgilaydi (masalan, kitob, she'r, qo'shiq, kino,
+                            rasm,
+                            haykal va boshqalar).
+                        </li>
+                        <li>
+                            Teg <b>dfn</b> "ta'rif elementi" degan ma'noni anglatadi va u tarkibda aniqlanishi kerak
+                            bo'lgan atamani belgilaydi.
+                        </li>
+                    </ul>
+                </blockquote>
+            </div>
+            <div>
+                <b>13. &lt;bdo&gt;</b>
+                <blockquote>
+                    Teg <b>bdo</b> joriy matn yo'nalishini bekor qilish uchun ishlatiladi. Shuning uchun ichidagi matn
+                    boshqa yo'nalishda ko'rsatiladi. dir <i>ltr</i> <i> rtl</i> matn yo’nalishini aniqlaydi
+                </blockquote>
+            </div>
+            <div>
+                <b>14. &lt;dl&gt;, &lt;dt&gt;, &lt;dd&gt;</b>
+                <blockquote>
+                    <ul>
+                        <li>
+                            Teg <b>dd</b>tavsiflar ro'yxatidagi atama/ismni tasvirlash uchun ishlatiladi.
+                        </li>
+                        <li>
+                            Teg <b>dl</b> (ta'riflar ro'yxatini belgilaydi) va <b>dt</b> (atamalarni/ismlarni
+                            belgilaydi) 
+                            <b>dd </b>bilan birgalikda ishlatiladi.
+                        </li>
+                        <li>
+                            Teg ichiga  <b>dd</b> paragraflar, qatorlar, rasmlar, havolalar, ro'yxatlar va boshqalarni
+                            qo'yishingiz mumkin.
+                        </li>
+                    </ul>
+                </blockquote>
+                <img src="./images/dd_dt.png" alt="dd_dt">
+            </div>
+            <div>
+                <b>15. &lt;details&gt;</b>
+                <blockquote>
+                    Teg <b>details </b> ko'pincha foydalanuvchi ochishi va yopishi mumkin bo'lgan interaktiv vidjet
+                    yaratish
+                    uchun ishlatiladi. Odatiy bo'lib, vidjet yopiq. Ochiq bo'lsa, u kengayadi va ichidagi tarkibni
+                    ko'rsatadi. Tafsilotlar uchun ko'rinadigan sarlavhani belgilash uchun <b>summary </b>tegi bilan
+                    birgalikda ishlatiladi
+                </blockquote>
+                <img src="./images/details.png" alt="details" style='max-width: 1000px;'>
+            </div>
+            <div>
+                <b>16. &lt;meter&gt;, &lt;progress&gt;</b>
+                <blockquote>
+                    foizlar bilan ishlashda qo’l keladi. Yangi frontendchililar resumesida js, html, css larni qancha
+                    bilishini shu orqali belgilashadi. 😄
+                </blockquote>
+                <img src="./images/progress.png" alt="progress">
+            </div>
+            <div>
+                <b>17. &lt;optgroup&gt;</b>
+                <blockquote>
+                    Teg <b>select</b> elementida (ochiladigan ro'yxat) <b>optgroup</b> tegishli variantlarni guruhlash
+                    uchun
+                    ishlatiladi.
+                </blockquote>
+                <img src="./images/optgroup.png" alt="optgroup">
+            </div>
+            <div>
+                <b>18. &lt;picture&gt;</b>
+                <blockquote>
+                    bu orqali biz ekranni size orqali yani css mediaquery bilan oxash necha px dan keyn qaysi rasm
+                    ko’rinishini belgilash mumkin
+                </blockquote>
+                <img src="./images/picture.png" alt="picture">
+            </div>
+            <div>
+                <b>19. &lt;wbr&gt;</b>
+                <blockquote>
+                    (Word Break Opportunity) tegi <b>wbr</b> matnning qaysi joyiga satr uzilishini qoʻshish mumkinligini
+                    koʻrsatadi.
+                </blockquote>
+                <img src="./images/wbr.png" alt="wbr" style='max-width: 1000px;'>
+            </div>
+            <div>
+                <b>20. &lt;canvas&gt;</b>
+                <blockquote>
+                    Bu teg orqali har hil diagramma chart hatto o’yinlar ham yaratish mumkin. Buni o’zini alohida soha
+                    sifatida qaralsa ham bo’ladi. Misol uchun: <a href="https://bruno-simon.com/">Bruno simon</a>
+                </blockquote>
+            </div>
+            <div>
+                <b>20. ARIA attribute</b>
+                <blockquote>
+                    ARIA (Accessible Rich Internet Applications) atributlari veb-saytlarning foydalanuvchanligini
+                    yaxshilash uchun ishlatiladigan maxsus HTML atributlardir. Bu atributlar yordamida veb-elementlar
+                    ekranni o'qiydigan dasturlar va boshqa yordamchi texnologiyalar tomonidan tushunarli bo'ladi. ARIA
+                    atributlari asosan ko'rish qobiliyati cheklangan foydalanuvchilar uchun interaktiv veb-kontentni
+                    tushunarli qilish uchun mo'ljallangan.
+                    <ul>
+                        <li>Role (Rol) Atributi**: Elementning turini yoki vazifasini bildiradi. <br>
+                            - Misol: <b>role="button"</b> bu elementni tugma deb belgilaydi.</li>
+                        <li>State (Holat) Atributlari**: Elementning hozirgi holatini bildiradi. <br>
+                            - Misol: <b>aria-checked="true"</b> bu elementning tanlanganligini bildiradi.</li>
+                        <li>Property (Xususiyat) Atributlari**: Elementning doimiy yoki o'zgaruvchan xususiyatlarini
+                            belgilaydi. <br>
+                            - Misol: <b>aria-label="Menu"</b> bu elementning menyu ekanligini bildiradi.</li>
+                        <li>Live Region (Jonli Hudud) Atributlari**: Elementda ma'lumotlar dinamik tarzda
+                            yangilangan paytda foydalanuvchiga bildirish uchun ishlatiladi. <br>
+                            - Misol: <b>aria-live="polite"</b> bu elementdagi o'zgarishlar ekranni o'qiydigan dastur
+                            tomonidan bildiriladi.</li>
+                        <li>Relationship (Aloqa) Atributlari**: Elementlarning bir-biri bilan qanday bog'liqligini
+                            bildiradi. <br>
+                            - Misol: <b>aria-labelledby="label-id"</b> bu element qaysi yorliq bilan bog'liqligini
+                            ko'rsatadi.</li>
+                        <li>Widget Atributlari**: Interaktiv komponentlar uchun mo'ljallangan. <br>
+                            - Misol: <b>aria-expanded="false"</b> bu element hozircha kengaytirilmaganligini bildiradi.
+                        </li>
+                    </ul>
+                </blockquote>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
