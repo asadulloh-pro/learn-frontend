@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwindcss</title>
+    <link href="./dist/output.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <main class='container'>
+        <section>
+            <h2 class='font-bold text-[28px]'>Tailwind CSS nima?</h2>
+            <p class='p-2'>
+                U dastlab 2017-yilning 1-noyabrida Adam Wathan va uning hamkasblari tomonidan chiqarilgan.
+                Tailwind CSS — bu utility-first (foydali funksiyalar birinchi o‘rinda) CSS framework bo‘lib,
+                u
+                sizga HTML
+                kodingizni tez va samarali tarzda styling qilish imkonini beradi. Tailwind'ning asosiy farqi — unda siz
+                elementlar uchun CSS yozish o'rniga, oldindan tayyorlangan utility-klasslardan foydalanasiz. Bu klasslar
+                ma'lum bir stilni bildiradi, masalan, mt-4 (margin-top: 4rem) yoki text-center (matnni markazlash) kabi.
+            </p>
+            <h2 class='font-bold text-[28px]'>Tailwind CSS'ning asosiy xususiyatlari:
+            </h2>
+            <ul class='p-2'>
+                <li class='mt-2 font-medium text-primary'>
+                    1. Utility-first (foydali funksiyalar birinchi): Tailwind CSS foydalanuvchilarga katta komponentlar
+                    o‘rniga kichik utility-klasslarni taklif qiladi. Har bir klass muayyan bir CSS xususiyatini
+                    ifodalaydi va bu klasslar bilan oson boshqarish va sozlash imkoniyatiga ega bo‘lasiz.
+                    <img src="./images/image1.png" alt="img">
+                </li>
+                <li class='mt-2 font-medium text-primary'>
+                    2. To‘liq moslashuvchanlik: Tailwind sizga to‘liq moslashuvchanlik beradi. Siz o‘zingizga kerak
+                    bo‘lgan
+                    barcha stylingni to‘g‘ridan-to‘g‘ri HTML kodingizda utility-klasslar orqali berishingiz mumkin.
+                </li>
+                <li class='mt-2 font-medium text-primary'>
+                    3. Zero configuration (noldan konfiguratsiya qilish kerak emas): Tailwind CSS bilan siz asosiy
+                    dizayn
+                    konfiguratsiyalariga muhtoj emassiz. Framework ichida tayyorlangan klasslar orqali butunlay
+                    stylingni amalga oshirishingiz mumkin.
+                </li>
+                <li class='mt-2 font-medium text-primary'>
+                    4. Responsive design osonlikcha: Tailwind CSS responsiv (moslanuvchan) dizaynni juda osonlashtiradi.
+                    Masalan, ekran o‘lchamlariga qarab ma’lum klasslarni qo‘llash imkoniyatini beradi:
+                    <img src="./images/image2.png" alt="img2">
+                </li>
+
+            </ul>
+            <h2 class='font-bold text-[28px]'>@apply</h2>
+            <p class=' p-2 font-medium text-primary'>
+                Component-based dizayn: Tailwind'da siz utility-klasslarni komponentlar orqali ham qayta
+                ishlatishingiz mumkin. Masalan, Tailwind CSS’ning @apply direktivasidan foydalanib, qayta
+                ishlatiladigan komponentlar yaratishingiz mumkin:
+                <img src="./images/image3.png" alt="img3">
+            </p>
+            <h2 class='font-bold text-[28px]'>@layer</h2>
+            <div class='p-2'>
+
+                <p>
+                    Tailwind CSS-da @layer direktivasi sizga CSS-ni turli layerlarda (qatlamlarda) yozish imkonini
+                    beradi.
+                    Bu direktiva yordamida siz Tailwind CSS'ning mavjud qatlamlariga o‘z stylingingizni qo‘shishingiz
+                    yoki
+                    override (ustidan o‘zgarish kiritish) qilishingiz mumkin. Tailwind CSS uchta asosiy qatlamni o‘z
+                    ichiga
+                    oladi:
+                </p>
+                <ul class='p-2'>
+                    <li class='font-medium text-primary mt-2'>
+                        1. Base: Bunda asosiy elementlar uchun default styling yoziladi (masalan, body, h1, p, va
+                        hokazo).
+                    </li>
+                    <li class='font-medium text-primary mt-2'>
+                        2. Components: Bu qatlamda qayta ishlatiladigan komponentlar (masalan, button'lar, card'lar)
+                        uchun styling mavjud.
+                    </li>
+                    <li class='font-medium text-primary mt-2'>
+                        3. Utilities: Tailwind CSS'da utility-klasslarni o‘z ichiga olgan asosiy qatlam. Siz bu qatlamga
+                        yangi utility-klasslar qo'shishingiz mumkin.
+                    </li>
+                </ul>
+                <p class=' p-2 font-medium text-primary'>
+                    Component-based dizayn: Tailwind'da siz utility-klasslarni komponentlar orqali ham qayta
+                    ishlatishingiz mumkin. Masalan, Tailwind CSS’ning @apply direktivasidan foydalanib, qayta
+                    ishlatiladigan komponentlar yaratishingiz mumkin:
+                    <img src="./images/layer.png" alt="layer">
+                </p>
+            </div>
+
+            <h2 class='text-[28px] font-medium'>
+                peer
+            </h2>
+            <p class='text-primary p-2'>
+                peer — bu CSS va Tailwind CSS'da ko‘pincha qo‘llaniladigan konsept bo‘lib, u asosan bir elementning
+                boshqa bir elementga ta'sirini ifodalash uchun ishlatiladi. Tailwind CSS'da peer klassi, CSS'da esa peer
+                selektori yordamida bir elementning holatiga qarab boshqa elementlarning stilini o‘zgartirish mumkin.
+                Tailwind CSS'da peer classi yordamida siz bir elementning holatini (masalan, checkbox yoki radio button)
+                asos qilib, uning o‘zgarishi boshqa elementlarning stiliga ta'sir ko‘rsatishini amalga oshirishingiz
+                mumkin. Bu, odatda, interaktiv holatlar va dinamik dizayn uchun ishlatiladi.
+                <img src="./images/peer.png" alt="peer">
+            </p>
+            <ul class='text-primary'>
+                <li>
+                    1. peer: Checkboxga peer klassini berish orqali, checkbox (yoki boshqa interaktiv element) asosida
+                    stil
+                    o‘zgarishlarini ko‘rsatishingiz mumkin.
+                </li>
+                <li>
+                    2. peer-checked:text-green-500: Bu holatda, peer klassiga ega bo‘lgan element (checkbox) belgilangan
+                    bo‘lsa, label elementining matn rangi yashil bo‘ladi.
+                </li>
+            </ul>
+            <h2 class='text-[28px] font-medium'>
+                To'g'ridan-to'g'ri child larni uslublash (*-{modifier})
+            </h2>
+            <div
+                class="flex gap-3 my-2  *:rounded-full *:border *:border-sky-100 *:bg-[#56a1d0] *:px-2 *:py-0.5 dark:text-sky-300 dark:*:border-sky-500/15 dark:*:bg-sky-500/10 ...">
+                <div>BMW</div>
+                <div>BYD</div>
+                <div>GM</div>
+                <div>Toyota</div>
+            </div>
+            <img src="./images/all.png" alt="all">
+            <h2 class='text-[28px] font-medium'>
+                theme()
+            </h2>
+            <p class='text-primary'>
+                Tailwind CSS'da theme funksiyasi, ilovangizning dizayn tizimini sozlash va kengaytirish uchun
+                ishlatiladi. Bu sizga ranglar, oraliqlar, tipografiya va boshqa dizayn xususiyatlari uchun maxsus
+                qiymatlarni belgilash imkonini beradi. Bu sozlash tailwind.config.js faylida amalga oshiriladi.
+            </p>
+            <ul class='text-primary'>
+                <li>
+                    1. Standart Tema: Tailwind CSS bilan birga keladigan standart tema, ranglar, oraliqlar, tipografiya
+                    va boshqalar uchun oldindan belgilangan qiymatlarni o‘z ichiga oladi.
+                </li>
+                <li>
+                    2. Temani Moslashtirish: Temani sozlash uchun tailwind.config.js faylini tahrir qilishingiz mumkin.
+                    Bu standart qiymatlarni o‘zgartirish, mavjudlarini kengaytirish yoki yangilarini qo‘shishga imkon
+                    beradi.
+                </li>
+                <li>
+                    3. Temani Kengaytirish: Temani kengaytirish orqali yangi utility klasslarini qo‘shishingiz mumkin,
+                    bu eski qiymatlarni o‘zgartirmaydi.
+                </li>
+                <img src="./images/theme.png" alt="theme">
+            </ul>
+        </section>
+    </main>
+</body>
+
+</html>
