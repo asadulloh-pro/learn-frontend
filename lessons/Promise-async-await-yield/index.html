@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise Async Await Yield</title>
+</head>
+
+<body>
+    <h1>
+        JavaScript nima ?
+    </h1>
+    <p> JavaScript — bu dinamik, ko‘p paradigmalı, keng qo‘llaniladigan dasturlash tili. U asosan veb-ilovalarni
+        rivojlantirishda ishlatiladi, lekin server tomonida ham, mobil, ish stoli ilovalari va o‘yinlarni yaratishda ham
+        qo‘llaniladi. JavaScriptni to‘liq tushunish uchun uni turli jihatlar bo‘yicha ko‘rib chiqish muhim.</p>
+    <h2>
+        1. JavaScript tarixi
+    </h2>
+    <p>JavaScript dasturlash tili Netscape kompaniyasining xodimi Brendan Eich tomonidan 1995-yilda yaratildi. U dastlab
+        "Mocha", keyin "LiveScript", oxirida esa "JavaScript" deb nomlandi. Boshida Java tiliga o‘xshash ko‘rinar edi,
+        lekin o‘zida farqli va soddalashtirilgan funksiyalarni jamlagan edi. JavaScript hozirgi kunda **ECMAScript**
+        standarti asosida rivojlanmoqda.
+
+        ECMAScript (ES) — bu JavaScript dasturlash tilining standartidir. ECMAScript standarti JavaScript tilining
+        sintaksisi, semantikasini va asosiy xususiyatlarini aniqlaydi. U xalqaro standartlar tashkiloti Ecma
+        International tomonidan ishlab chiqiladi va kengaytiriladi.</p>
+    <h2>
+        2. JavaScriptning qo‘llanish sohalari
+    </h2>
+
+    <p>JavaScript asosan veb-brauzerlarda ishlaydigan kod yozish uchun yaratilgan, lekin hozirda undan turli sohalarda
+        foydalaniladi:</p>
+    <ul>
+        <li>
+            Frontend rivojlantirish: UI va UX yaxshilash, interaktivlik qo‘shish, veb sahifalarga dinamizm olib kirish
+            uchun.
+        </li>
+        <li>
+            Backend rivojlantirish: Node.js yordamida server tomonida ishlovchi kodlar yozish mumkin.
+        </li>
+        <li>
+            Mobil ilovalar: React Native va Ionic kabi freymvorklar orqali mobil ilovalarni yaratish mumkin.
+        </li>
+        <li>
+            Desktop ilovalar: Electron orqali ish stoli ilovalarini yaratish mumkin.
+        </li>
+        <li>
+            O‘yin yaratish: Phaser, Three.js kabi kutubxonalar o‘yin ishlab chiqish uchun ishlatiladi. </li>
+    </ul>
+    <h2>
+        3. Ma'lumot turlari (Data Types)
+    </h2>
+    <p>JavaScriptda ma'lumotlar turi dinamik bo‘lib, quyidagi asosiy turlarga ega:</p>
+    <p>Primitive Types:</p>
+    <ul>
+        <li>
+            String: "Salom"
+        </li>
+        <li>
+            Number: 123
+        </li>
+        <li>
+            Boolean: true, false
+        </li>
+        <li>
+            null: Ma'lum bo‘lmagan qiymat.
+        </li>
+        <li>
+            undefined: Qiymat berilmagan.
+        </li>
+        <li>
+            Symbol: Yagona qiymatlarni ifodalovchi tur.
+        </li>
+    </ul>
+    <p>
+        Object (Obyektlar):
+    </p>
+    <ul>
+        <li>Obyektlar kalit-qiymat juftlari sifatida ishlatiladi: { name: "Test", age: 25 }.</li>
+    </ul>
+    <h2>async/await</h2>
+    <h3>Async/Await'ning asosiy tushunchalari:</h3>
+    <h4>1. Async funksiyalar</h4>
+    <p>async kalit so‘zi yordamida funksiyalar asenkron deb belgilanadi. Bu funksiya har doim Promise qaytaradi, va
+        undagi qiymatni olish uchun await kalit so‘zi ishlatiladi. Agar funksiya oddiy qiymat qaytaradigan bo‘lsa, u
+        avtomatik ravishda resolved Promise’ga o‘raladi.</p>
+    <h4>2. Await kalit so‘zi</h4>
+    <p>await kalit so‘zi faqat async funksiyalar ichida ishlaydi. U Promise hal bo‘lguncha kutadi va resolved bo‘lgan
+        qiymatni qaytaradi. await ishlatilgan joyda kod kutish holatiga o'tadi va shu nuqtada JavaScript o‘zining event
+        loop jarayonini davom ettiradi.</p>
+    <h2>Foydalari va afzalliklari:</h2>
+    <ul>
+        <li>
+            Ko‘rinishi sinxron kabi: async/await yordamida kod sinxron ko‘rinadi, lekin asenkron ishlaydi. Bu kodni
+            osonroq o‘qish va tushunish imkonini beradi.
+        </li>
+        <li>
+            Promise chaining'dan saqlanish: Agar Promise bilan ishlasangiz, zanjirlangan .then() metodlaridan
+            foydalanish kerak bo‘ladi. Bu esa uzun va murakkab kodga olib kelishi mumkin. Async/await buni
+            soddalashtiradi.
+        </li>
+        <li>
+            Xato bilan ishlashni yaxshilaydi: Promise'dagi .catch() blokidan farqli ravishda, try/catch bloklari orqali
+            xatolarni qo‘lga olish ancha tushunarli va intuitiv bo‘ladi.
+        </li>
+    </ul>
+    <img src="./images/async_await.png" alt="async_await">
+    <h2>Promise</h2>
+    <p>JavaScript 2015 yil (ES6) yangilanishida Promise ob'ekti joriy etildi.</p>
+    <p>Promise Holatlari:</p>
+    <ul>
+        <li>
+            Pending: Promise hali bajarilmagan va natija yoki xatolik hali mavjud emas.
+        </li>
+        <li>
+            Fulfilled: Promise muvaffaqiyatli bajarilgan va resolve chaqirilgan.
+        </li>
+        <li>
+            Rejected: Promise bajarilmagan va reject chaqirilgan.
+        </li>
+    </ul>
+    <p>
+        Promise JavaScript dasturlash tilida asinxron operatsiyalarni boshqarish va ularning natijalarini ishlash uchun
+        ishlatiladigan kuchli vositadir. Promise obyektlari asinxron operatsiya tugagandan so'ng ma'lumotlarni qaytarish
+        yoki xatolikni bildirishi mumkin.
+        <br>
+        Promise obyekti yaratishda, asinxron operatsiyani amalga oshiruvchi funksiya (executor funksiyasi) beriladi. Bu
+        funksiya ikkita argumentni qabul qiladi: resolve va reject funksiyalari.
+    </p>
+    <img src="./images/promise.png" alt="promise">
+    <h4>then ,catch va finally Metodlari:</h4>
+    <ul>
+        <li>
+            then(onFulfilled, onRejected) — bu metod Promise muvaffaqiyatli bajarilganda (resolve chaqirilganda) yoki
+            xatolik yuz berilganda (reject chaqirilganda) qo‘llaniladigan funksiyalarni qabul qiladi.
+        </li>
+        <li>
+            catch(onRejected) — xatoliklar uchun alohida metod bo‘lib, Promise xato bilan tugaganida chaqiriladi.
+        </li>
+        <li>
+            finally metodi Promise bajarilgandan so'ng, muvaffaqiyatli yoki xatolik bilan tugaganidan qat'i nazar,
+            bajariladi.
+        </li>
+    </ul>
+    <img src="./images/then_then.png" alt="then_then">
+    <h3>Parallel Asinxron Operatsiyalar</h3>
+    <p>Promise.all(promises) — bir nechta Promise obyekti to‘plamini oladi va barcha Promiselar muvaffaqiyatli
+        bajarilsa, resolve bo‘lishi, aks holda reject bo‘ladi.</p>
+    <img src="./images/promise_all.png" alt="promise_all">
+    <h3>allSettled</h3>
+    <p>Promise.allSettled(promises) — barcha Promiselar muvaffaqiyatli yoki xatolik bilan tugagandan so‘ng, fulfilled
+        yoki rejected holatida qaytaradi.</p>
+    <img src="./images/promise_allsettled.png" alt="promise_allsettled">
+    <h3>race</h3>
+    <p>Promise.race(promises) — eng birinchi bajarilgan Promisening natijasini qaytaradi.</p>
+    <img src="./images/race.png" alt="race">
+    <h3>any</h3>
+    <p>
+        Promise.any(promises) — barcha Promiselar reject bo'lsa, AggregateErrorni qaytaradi, aks holda birinchi
+        muvaffaqiyatli natijani qaytaradi.
+    </p>
+    <img src="./images/promise_any.png" alt="promise_any">
+    <h2>
+        yield
+    </h2>
+    <p>JavaScript'da yield kalit so'zi generator funksiyalar bilan ishlash uchun mo'ljallangan. yield yordamida
+        generatorlar qiymatlarni ketma-ket ravishda qaytarishi mumkin va generator funksiyalarining bajarilishini
+        to'xtatib, keyin qayta davom ettirish imkonini beradi.</p>
+
+    <h3>Generator</h3>
+    <h4>Generator Funksiyalar:</h4>
+    <ul>
+        <li>
+            Generator funksiyalar function* sintaksisi bilan yaratiladi. *belgisining mavjudligi bu funksiyaning
+            generator funksiyasi ekanligini bildiradi.
+        </li>
+        <li>
+            Generator funksiyalari yield kalit so'zini ishlatib, to'xtatish nuqtalarini belgilashga imkon beradi va
+            yield orqali qiymatlarni qaytaradi.
+        </li>
+        <li>
+            Generatorlar iterator sifatida ishlaydi, bu esa ularni for-of loop yoki forEach kabi iteratorlarni
+            qo'llab-quvvatlaydigan strukturalarda ishlatishga imkon beradi.
+        </li>
+    </ul>
+    <img src="./images/yiled.png" alt="yiled">
+    <ul>
+        <li>
+            yield qiymatlarni generatordan tashqariga qaytarish uchun ishlatiladi. Har safar next() metodini
+            chaqirganda, generator yield qatorida to'xtaydi va qiymat qaytaradi.
+        </li>
+        <li>
+            yield generator funksiyasining bajarilishini vaqtincha to'xtatadi va keyin qayta davom ettirishi mumkin.
+            Boshqa qiymatlarni yield yordamida qaytarish va generator funksiyasining holatini saqlash mumkin.
+        </li>
+        <li>
+            yield generator funksiyasining bajarilishini vaqtincha to'xtatadi va keyin qayta davom ettirishi mumkin.
+            Boshqa qiymatlarni yield yordamida qaytarish va generator funksiyasining holatini saqlash mumkin.
+        </li>
+    </ul>
+    <img src="./images/yield2.png" alt="yiled">
+    <h3>
+        yield*
+    </h3>
+    <p>
+        yield* sintaksisi boshqa generator funksiyalarini yoki iterativ obyektlarni generator ichida chaqirish uchun
+        ishlatiladi. Bu orqali ichki generatorlardan yoki iteratorlardan qiymatlarni olish mumkin.
+    </p>
+    <img src="./images/yield3.png" alt="yield3">
+    <h2>Asinxron Generatorlar</h2>
+    <ul>
+        <li>
+            ES2018 (ES9) da asinxron generatorlar joriy etildi. Bu generatorlar async function* sintaksisi bilan
+            yaratiladi va await kalit so'zi yordamida asinxron qiymatlarni qaytarishi mumkin.
+        </li>
+        <li>
+            Asinxron generatorlar for-await-of loop yordamida iteratsiya qilinadi va ular asinxron iterativ obyektlar
+            bilan ishlash imkonini beradi.
+        </li>
+    </ul>
+    <img src="./images/async_generator.png" alt="async_generator">
+
+</body>
+
+</html>
